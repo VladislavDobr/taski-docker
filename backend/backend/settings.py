@@ -8,9 +8,7 @@ SECRET_KEY = os.environ.get("SECRET", "your_default_secret_key")
 
 DEBUG = False
 
-ALLOWED_HOSTS = str(os.environ.get("HOSTS")).split(",")[
-    "notespractic.ru", "localhost", "127.0.0.1"
-]
+ALLOWED_HOSTS = str(os.environ.get("HOSTS")).split(",")
 
 
 # Application definition
