@@ -8,7 +8,7 @@ SECRET_KEY = os.environ.get("SECRET", "your_default_secret_key")
 
 DEBUG = False
 
-ALLOWED_HOSTS = str(os.environ.get("HOSTS")).split(",")
+ALLOWED_HOSTS = [host.strip() for host in os.getenv("HOSTS", "127.0.0.1").split(",")]
 
 
 # Application definition
